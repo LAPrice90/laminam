@@ -1,5 +1,5 @@
 // =========================================================
-//  SABRE STONE — HEADER / NAVIGATION JS
+//  LAMINAM COMMERICAL — HEADER / NAVIGATION JS
 //  ---------------------------------------------------------
 //  Desktop (≥1200px)
 //    • Top‑level "Porcelain Finishes" opens dropdown on HOVER

@@ -36,6 +36,12 @@
   justify-content:space-between;
   gap:2rem 4rem;
 }
+.footer-links>div{
+  flex:1 1 200px;
+}
+.footer-links>div:last-child{
+  flex:1 1 280px;
+}
 .footer-links h4{
   font-size:1rem;
   font-family:var(--font-heading);
@@ -151,7 +157,7 @@
   /* 2️⃣  Four equal link columns on second row */
   .footer-links{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1.35fr;
     gap: 2.5rem 2rem;                    /* horizontal, vertical */
     width: 100%;
   }
@@ -212,7 +218,7 @@
   .footer-links{
     grid-column: 2 / span 4;          /* occupy the 4 link cols */
     display:grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: 1fr 1fr 1fr 1.4fr;
     gap:0 4rem;
   }
 
