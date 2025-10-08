@@ -70,8 +70,8 @@ const isScrolled = () => window.scrollY > 10;
 function getCorrectLogo() {
   const isMenuOpen    = navWrapper.classList.contains("open");
   const shouldBeWhite = (isMenuOpen && isMobile()) || isScrolled() || header.classList.contains("dropdown-active");
-  return shouldBeWhite ? basePath + "images/symbol-white.svg"
-                       : basePath + "images/symbol-blue.svg";
+  return shouldBeWhite ? basePath + "images/Laminam_Logo_Clean_White.png"
+                       : basePath + "images/Laminam_Logo_Clean_Navy.png";
 }
 
 function updateHeaderState() {
