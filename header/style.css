@@ -11,6 +11,33 @@
   left: 0;
   width: 100%;
   z-index: 999;
+  overflow: visible;
+}
+
+#main-header::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  left: 0;
+  right: 0;
+  height: 320px; /* extended wash beneath the logo */
+  background: linear-gradient(
+    180deg,
+    rgba(253, 253, 252, 0.95) 0%,
+    rgba(253, 253, 252, 0.85) 35%,
+    rgba(253, 253, 252, 0.6) 65%,
+    rgba(253, 253, 252, 0.15) 90%,
+    rgba(253, 253, 252, 0) 100%
+  );
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#main-header.scrolled::before,
+#main-header.menu-open::before,
+#main-header.dropdown-active::before,
+#main-header:hover::before {
+  opacity: 0;
 }
 
 .site-header {
