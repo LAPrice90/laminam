@@ -22,6 +22,10 @@ const basePath = (() => {
   return new URL("../", src).href; // e.g. https://user.github.io/repo/
 })();
 
+const NAVY_LOGO_SRC  = basePath + "images/Laminam_Logo_Clean_Navy.png";
+const WHITE_LOGO_SRC = basePath + "images/Laminam_Logo_Clean_White.png";
+const FORCE_NAVY_LOGO = true; // keep compliance default; toggle off if white logo is approved
+
 // ---------------------------------------------------------
 //  Favicon color swap for dark mode
 // ---------------------------------------------------------
@@ -68,10 +72,11 @@ const isMobile   = () => window.innerWidth < 1200;
 const isScrolled = () => window.scrollY > 10;
 
 function getCorrectLogo() {
+  if (FORCE_NAVY_LOGO) return NAVY_LOGO_SRC;
+
   const isMenuOpen    = navWrapper.classList.contains("open");
   const shouldBeWhite = (isMenuOpen && isMobile()) || isScrolled() || header.classList.contains("dropdown-active");
-  return shouldBeWhite ? basePath + "images/Laminam_Logo_Clean_White.png"
-                       : basePath + "images/Laminam_Logo_Clean_Navy.png";
+  return shouldBeWhite ? WHITE_LOGO_SRC : NAVY_LOGO_SRC;
 }
 
 function updateHeaderState() {
@@ -218,4 +223,3 @@ window.addEventListener("resize", () => {
 
 // Initial paint
 updateHeaderState();
-

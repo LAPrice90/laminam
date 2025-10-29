@@ -141,8 +141,8 @@
 
 .media-right__image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;         /* fill the width, crop overflow    */
+  height: auto;
+  object-fit: contain;       /* keep logos/imagery uncropped     */
   object-position: center;
 }
 
