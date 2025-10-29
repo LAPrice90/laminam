@@ -1,0 +1,77 @@
+.hero-section {
+  width: 100%;
+  height: 100vh;
+  background: url("../../images/arabescato-gold-laminam.png") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25); /* Try 0.05–0.08 */
+  z-index: 0;
+}
+
+
+.hero-inner {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100vh;
+  padding-bottom: 25vh;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-block {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: clamp(0.25rem, 1vw, 0.75rem);
+  margin: 0 auto;
+  max-width: 90vw;
+}
+
+.hero-line {
+  font-family: 'Bodoni Moda', serif;    
+  font-size: clamp(36px, 9vw, 90px);
+  text-transform: uppercase;
+  color: var(--color-navy);
+  display: block;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.hero-line--primary {
+  font-size: clamp(52px, 12vw, 128px);
+  letter-spacing: clamp(0.18rem, 1.2vw, 1.4rem);
+}
+
+.hero-line--secondary {
+  font-size: clamp(38px, 9vw, 92px);
+  letter-spacing: clamp(0.12rem, 0.9vw, 1rem);
+}
+
+.hero-tagline {
+  font-family: 'Work Sans', sans-serif;
+  font-size: clamp(22px, 5.2vw, 55px);
+  font-weight: 250;
+  font-style: normal;
+  line-height: 1.1;
+  display: block;
+  margin-top: 0;
+  padding: 0;
+  color: var(--color-gold);
+  letter-spacing: clamp(0.08rem, 0.6vw, 0.5rem);
+  white-space: nowrap;
+}
+
